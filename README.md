@@ -26,8 +26,9 @@ Password spraying refers to the attack method that takes a large number of usern
 **You must strictly respect the password policy during sprays to avoid locking all the accounts. DO NOT SPRAY THE WORDLIST AT ONCE !**
 
 Password policy includes among other things:
-	* The lockout threshold = limit of login attempts before lockout.
-	* The observation window = minutes after the last failed login before being able to make another attempt.
+
+* The lockout threshold = limit of login attempts before lockout.
+* The observation window = minutes after the last failed login before being able to make another attempt.
 
 The maximal number of attempts possible on 24 hours = (Lockout threshold - 1) * (60 / observation window) * 24
 

@@ -13,11 +13,23 @@ Could also be useful to crack some hashes.
 	* The location (`-l`)
 	* The year (`-y`), the next year (+1) and the previous years (-3)
 
-* Add static passwords based on the file `best-passwords.txt`. It is recommended to spray these passwords even if they don't match the password policy. They are added at the end of the wordlist, including the **empty** password.
+* Add static passwords based on the file `best-passwords.txt`. It is recommended to spray these passwords even if they don't match the password policy requirements. They are added at the end of the wordlist, including the **empty** password.
 
 * Apply the minimum password length from the password policy (`-p`).
 
 * Add special character of your choice at the end of the words (`-s`). You should avoid this option if you use the tool for cracking purpose and use the [OneRuleToRuleThemAll](https://github.com/NotSoSecure/password_cracking_rules/blob/master/OneRuleToRuleThemAll.rule) instead.
+
+## Disclaimer
+
+Password spraying refers to the attack method that takes a large number of usernames and attempt against them a single password.
+
+**You must strictly respect the password policy during sprays to avoid locking all the accounts. DO NOT SPRAY THE WORDLIST AT ONCE !**
+
+Password policy includes among other things:
+	* The lockout threshold = limit of login attempts before lockout.
+	* The observation window = minutes after the last failed login before being able to make another attempt.
+
+The maximal number of attempts possible on 24 hours = (Lockout threshold - 1) * (60 / observation window) * 24
 
 ## Installation 
 

@@ -31,7 +31,7 @@ Could also be useful to crack some hashes.
 ## Output
 
 
-	# python3 generate_password_spray.py -c Company -k France -l Paris -y 2022 -p 12 -s '!'
+	# python3 generate_password_spray.py -c Company -k France -l Paris -y 2022 -p 10 -s '!'
 	[+] Generating wordlist...
 	[+] Company_wordlist.txt generated !
 

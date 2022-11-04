@@ -27,7 +27,8 @@ area_code = args.area_code
 year = args.year
 min_length = args.password_min_length
 special_char = args.special_char
-words = args.words.split(',')
+if args.words:
+	words = args.words.split(',')
 
 # List of +1 and -3 years based on user input
 years = [year]
@@ -35,6 +36,16 @@ years.append(str(int(year)+1))
 years.append(str(int(year)-1))
 years.append(str(int(year)-2))
 years.append(str(int(year)-3))
+
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+# Generate months
+def generate_months():
+	with open(company + '.txt', 'a') as file:
+		for month in months:
+			file.write(month + year + '\n')
+			file.write(month + years[2] + '\n')
+
 
 # Generate seasons passwords
 def generate_seasons():
@@ -131,7 +142,7 @@ def generate_job():
 
 # Generate key words related passwords
 def generate_words():
-	if words:
+	if args.words:
 		with open(company + '.txt', 'a') as file:
 			for word in words:
 				file.write(word + '123' + '\n')
@@ -172,6 +183,7 @@ if __name__ == "__main__":
 	generate_location()
 	generate_words()
 	generate_seasons()
+	generate_months()
 	generate_country()
 	apply_password_min_length()
 	print("[+] " + company + "_wordlist.txt generated !\n")

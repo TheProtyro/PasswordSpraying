@@ -47,14 +47,14 @@ The maximal number of attempts possible on 24 hours = (Lockout threshold - 1) * 
 	python3 generate_password_spray.py -h
 
 	# Mandatory arguments
-	python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2022 -p 10
+	python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2023 -p 10
 
 	# Optional arguments
-	python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2022 -p 10 -s '!' -w 'Eiffel,Tower,Defense,Louvre'
+	python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2023 -p 10 -s '!' -w 'Eiffel,Tower,Defense,Louvre'
 
 ## Wordlist example
 
-	# python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2022 -p 10 -w 'Eiffel,Tower,Defense,Louvre'
+	# python3 generate_password_spray.py -c Company -j Consultant -k France -l Paris -a 75 -y 2023 -p 10 -w 'Eiffel,Tower,Defense,Louvre'
 	[+] Generating wordlist...
 	[+] Company_wordlist.txt generated !
 
@@ -66,69 +66,58 @@ The maximal number of attempts possible on 24 hours = (Lockout threshold - 1) * 
 	[username as password]
 	P@ssw0rd
 	P@ssw0rd01
-	P@ssw0rd01
-	Password123
 	Password123
 	Password1
-	Password1!
 	Password1!
 	Hello123
 	Welcome1
 	Welcome1!
 	Welcome01
 	Welcome01!
-	Welcome01!
 	Company123
-	Company2022
 	Company2023
+	Company2024
+	Company2022
 	Company2021
 	Company2020
-	Company2019
 	Consultant123
 	Consultant1
-	Consultant2022
+	Consultant2023
 	Consultant75
-	Eiffel2022
+	Eiffel2023
 	Defense123
-	Defense2022
-	Louvre2022
-	Winter2022
-	Spring2022
-	Summer2022
-	Autumn2022
+	Defense2023
+	Louvre2023
 	Winter2023
 	Spring2023
 	Summer2023
 	Autumn2023
-	Winter2021
-	Spring2021
-	Summer2021
-	Autumn2021
-	January2022
-	January2021
-	February2022
-	February2021
-	August2022
-	August2021
-	September2022
-	September2021
-	October2022
-	October2021
-	November2022
-	November2021
-	December2022
-	December2021
-	France2022
+	Winter2024
+	Spring2024
+	Summer2024
+	Autumn2024
+	Winter2022
+	Spring2022
+	Summer2022
+	Autumn2022
+	January2023
+	February2023
+	August2023
+	September2023
+	October2023
+	November2023
+	December2023
+	France2023
 	Andorra123
-	Andorra2022
+	Andorra2023
 	Belgium123
-	Belgium2022
+	Belgium2023
 	Switzerland123
 	Switzerland1
-	Switzerland2022
+	Switzerland2023
 	Germany123
-	Germany2022
+	Germany2023
 	Luxembourg123
 	Luxembourg1
-	Luxembourg2022
-	Monaco2022	
+	Luxembourg2023
+	Monaco2023

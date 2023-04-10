@@ -44,8 +44,6 @@ def generate_months():
 	with open(company + '.txt', 'a') as file:
 		for month in months:
 			file.write(month + year + '\n')
-			file.write(month + years[2] + '\n')
-
 
 # Generate seasons passwords
 def generate_seasons():
@@ -156,28 +154,19 @@ def generate_words():
 					file.write(word + area_code + special_char + '\n')
 
 # Apply the password policy
-def apply_password_min_length():
+def apply_password_min_length_and_best_passwords():
 	with open('best_passwords.txt','r') as filebp, open(company + '.txt', 'r') as filein, open(company + '_wordlist.txt', 'w') as fileout:
-		best_passwords = filebp.readlines()
+		fileout.write('[empty password]\n')
+		fileout.write('[username as password]\n')
+		for line in filebp:
+			fileout.write(line)
 		for line in filein:
-			# best_passwords exception
-			if line in best_passwords:
-				fileout.write(line)
 			if len(line) > min_length:
 				fileout.write(line)
 	os.remove(company + '.txt')
 
-# Add the "static" passwords based on the file best_passwords.txt
-def generate_best_passwords():
-	with open('best_passwords.txt','r') as filein, open(company + '.txt', 'a') as fileout:
-		fileout.write('[empty password]\n')
-		fileout.write('[username as password]\n')
-		for password in filein:
-			fileout.write(password)
-
 if __name__ == "__main__":
 	print("[+] Generating wordlist...")
-	generate_best_passwords()
 	generate_company()
 	generate_job()
 	generate_location()
@@ -185,6 +174,6 @@ if __name__ == "__main__":
 	generate_seasons()
 	generate_months()
 	generate_country()
-	apply_password_min_length()
+	apply_password_min_length_and_best_passwords()
 	print("[+] " + company + "_wordlist.txt generated !\n")
 	print("/!\ Don't forget to spray with the username as password, an empty password and the best passwords.\n Even if the passwords don't match the password policy.") 
